@@ -3,15 +3,18 @@
 @tailwind utilities;
 
 @layer base{
-  html{
-    @apply bg-slate-900 text-slate-100 font-mono m-10
+  html{ @apply box-border m-0 p-0 bg-slate-900 text-slate-100 font-mono text-sm md:text-base lg:text-lg
+   
     
+  }
+  body {
+    @apply  mx-3 
   }
   section{
     @apply flex justify-center items-center flex-col
   }
   h1{
-    @apply text-5xl font-bold
+    @apply text-5xl md:text-5xl lg:text-6xl font-bold
   }
   
 }
