@@ -1,14 +1,20 @@
-import type { NextPage, InferGetStaticPropsType } from "next";
+import type { InferGetStaticPropsType } from "next";
 import { capitalizeFirstLetter } from "../utils/format";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import { nowActionsInfo } from "../mocks/nowActionsInfo";
 import { referentsInfo } from "../mocks/referentsInfo";
+import { toolsInfo } from "../mocks/toolsInfo";
+import fs from "fs";
+import path from "path";
+import matter from "gray-matter";
 
 const Home = ({
   nowData,
   referentsData,
+  toolsData,
+  posts,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
@@ -112,9 +118,41 @@ const Home = ({
               </a>
             </div>
           </section>
-          <section id="referents" className="h-screen">
-            <div className="flex justify-around flex-col h-full">
-              <span>Herramientas</span>
+          <section id="tools" className="h-screen">
+            <div className="flex justify-around flex-col h-full text-center">
+              {toolsData.map((tool) => {
+                const { id, name } = tool;
+                return (
+                  <Link href={`tools/${id.toString()}`} key={id}>
+                    <a className="hover:underline underline-offset-8 decoration-purple-500">
+                      {name}
+                    </a>
+                  </Link>
+                );
+              })}
+            </div>
+            <div>
+              <a href={"/#extras"} className="text-center">
+                <h3 className="self-center underline underline-offset-8 decoration-purple-500 mb-10">
+                  Más cosas que te pueden servir
+                </h3>
+              </a>
+            </div>
+          </section>
+
+          <section id="tools" className="h-screen">
+            <div className="flex justify-around flex-col h-full text-center">
+              {posts.map((post) => {
+                const { slug, frontMatter } = post;
+                console.log(post);
+                return (
+                  <Link href={`blog/${slug}`} key={slug}>
+                    <a className="hover:underline underline-offset-8 decoration-purple-500">
+                      {frontMatter.title}
+                    </a>
+                  </Link>
+                );
+              })}
             </div>
           </section>
         </div>
@@ -143,8 +181,26 @@ const Home = ({
 };
 
 export async function getStaticProps() {
+  const files = fs.readdirSync(path.join("posts"));
+
+  const posts = files.map((filename) => {
+    const slug = filename.replace(".md", "");
+    const markdownWithMeta = fs.readFileSync(
+      path.join("posts", filename),
+      "utf-8"
+    );
+
+    const { data: frontMatter } = matter(markdownWithMeta);
+    return { slug, frontMatter };
+  });
+
   return {
-    props: { nowData: nowActionsInfo, referentsData: referentsInfo },
+    props: {
+      nowData: nowActionsInfo,
+      referentsData: referentsInfo,
+      toolsData: toolsInfo,
+      posts,
+    },
   };
 }
 
