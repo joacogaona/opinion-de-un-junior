@@ -6,12 +6,14 @@ import { marked } from "marked";
 import Link from "next/link";
 const PostPage = ({ frontMatter: { title }, slug, content }) => {
   return (
-    <div>
+    <div className="flex flex-col items-center">
       <Link href="/">
-        <a>Atrás</a>
+        <a className="self-start">Atrás</a>
       </Link>
-      <h1>{title}</h1>
-      <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+
+      <article className="prose dark:prose-invert lg:prose-xl ">
+        <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
+      </article>
     </div>
   );
 };
