@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base{
-  html{ @apply box-border m-0 p-0 bg-slate-900 text-slate-100 font-mono text-sm md:text-base lg:text-lg
+  html{ @apply box-border m-0 p-0 bg-slate-900 text-slate-100 font-mono text-base md:text-base lg:text-lg scroll-smooth
     
   }
   body {
@@ -13,7 +13,7 @@
     @apply flex justify-center items-center flex-col
   }
   h1{
-    @apply text-5xl md:text-5xl lg:text-6xl font-bold
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold
   }
   
 }

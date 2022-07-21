@@ -8,9 +8,9 @@ type NowAction = {
 const nowActionsInfo: NowActions = [
   {
     id: 1,
-    title: "curso",
+    title: "curso CS50s Introduction to Computer Science",
     description:
-      "Es un curso gratis de Harvard. Con este curso pretendo reforzar mi conocimiento general ya que no estudié nada relacionado a sistemas en la universidad.",
+      "Quiero reforzar mi conocimiento general de sistemas, ya que no tengo educación formal en eso.",
     items: [
       {
         link: "https://www.edx.org/es/course/introduction-computer-science-harvardx-cs50x",
@@ -20,7 +20,7 @@ const nowActionsInfo: NowActions = [
   },
   {
     id: 2,
-    title: "trabajo",
+    title: "buscando trabajo",
     items: [
       {
         link: "https://www.linkedin.com/in/joaquingaona-react/",
@@ -28,11 +28,11 @@ const nowActionsInfo: NowActions = [
       },
     ],
     description:
-      "Renuncié a mi anterior trabajo hace ya 3 meses porque quería un cambio, y ahora estoy con entrevistas para entrar a algún nuevo lugar.",
+      "Renuncié a mi anterior trabajo hace ya 3 meses porque quería un cambio.",
   },
   {
     id: 3,
-    title: "probando",
+    title: "probando Typescript, NextJs  y Tailwind",
     items: [
       {
         link: "https://nextjs.org/",
@@ -41,11 +41,11 @@ const nowActionsInfo: NowActions = [
       { link: "https://www.typescriptlang.org/", name: "Typescript" },
     ],
     description:
-      "NextJs es un framework de React que nos permite mejorar el SEO y la velocidad de nuestra web. Para mucho de los referentes que sigo desarrollar en Javascript sin Typescript ya casi no tiene sentido (obvio que está biena aprender primero javascript, pero después es recomendable dar el paso a Typescript).",
+      "Uno por obligación, otro por curiosidad, y el restante por placer.",
   },
   {
     id: 4,
-    title: "viviendo en",
+    title: "viviendo en Panamá",
     items: [
       {
         link: "https://es.wikipedia.org/wiki/Panam%C3%A1",
@@ -53,7 +53,7 @@ const nowActionsInfo: NowActions = [
       },
     ],
     description:
-      "Hace 7 meses ya que estoy viajando por Latinoamerica y quedandome 3 meses en cada país, pase por Perú, Colombia, ahora Panamá y próximamente México.",
+      "Hace ya 7 meses que estoy viajando por Latinoamerica. Pasé por Perú, Colombia y ahora Panamá.",
   },
 ];
 

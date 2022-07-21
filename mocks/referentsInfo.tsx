@@ -46,7 +46,7 @@ const referentsInfo: ReferentsInfoType = [
     name: "Dan Abramov",
     twitter: "https://twitter.com/dan_abramov",
     talkLink: "https://www.youtube.com/watch?v=uqII0AOW1NM",
-    talkName: "Dan Abramov SLAYS Frontend Interview w/ Ex-Twitch Engineer",
+    talkName: "Frontend Interview w/ Ex-Twitch Engineer",
     description:
       "Se encuentra actualmente trabajando en la nueva documentación de React, y en Twitter suele publicar las actualizaciones y pide feedback a cualquier/a programador/a en especial a juniors.",
   },

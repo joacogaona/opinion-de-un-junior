@@ -2,9 +2,19 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
-
+import type { InferGetStaticPropsType } from "next";
 import Link from "next/link";
-const PostPage = ({ frontMatter: { title }, slug, content }) => {
+
+type GetStaticProps = {
+  frontMatter: {};
+  slug: string;
+  content: string;
+};
+const PostPage = ({
+  frontMatter: { title },
+  slug,
+  content,
+}: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div className="flex flex-col items-center">
       <Link href="/">
@@ -30,7 +40,11 @@ export async function getStaticPaths() {
   return { paths, fallback: false };
 }
 
-export async function getStaticProps({ params: { slug } }) {
+export async function getStaticProps({
+  params: { slug },
+}: {
+  params: { slug: string };
+}) {
   const markdownWithMeta = fs.readFileSync(
     path.join(`posts/${slug}.md`),
     "utf-8"
@@ -38,12 +52,10 @@ export async function getStaticProps({ params: { slug } }) {
 
   const { data: frontMatter, content } = matter(markdownWithMeta);
 
+  const props: GetStaticProps = { frontMatter, slug, content };
+
   return {
-    props: {
-      frontMatter,
-      slug,
-      content,
-    },
+    props,
   };
 }
 

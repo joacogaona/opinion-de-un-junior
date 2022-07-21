@@ -1,5 +1,6 @@
 ---
-title: "Entrevistas desarrollador web"
+title: "Entrevistas técnicas: desarrollo web"
+description: "Información sobre todas las entrevistas que me tomaron estos últimos meses."
 date: "18 julio 2022"
 ---
 
@@ -36,7 +37,7 @@ Ejemplos:
 
 ## Pruebas
 
-Otra opción son las pruebas que duran entre 2 y 4 horas y vos decidis cuando realizarla. Acá me tomaron a través de [Hackerrank](https://www.hackerrank.com), que tiene planes gratuitos donde te van dando ejercicios para que te vayas preparando para las pruebas (si practicas con estos ejercicios que te dan ellos, la prueba te va a parecer fácil), y a través de Codility que me tomaron esto:
+Otra opción son las pruebas que duran entre 2 y 4 horas y vos decidis cuando realizarla. Acá me tomaron a través de [Hackerrank](https://www.hackerrank.com)y (CodeSignal)[https://codesignal.com/developers/interview-practice/] que tienen planes gratuitos donde te van dando ejercicios para que te vayas preparando para las pruebas (si practicas con estos ejercicios que te dan ellos, la prueba te va a parecer fácil), y a través de Codility que me tomaron esto:
 
 - Crear dos inputs (username y password) con un boton de login en React
 - En una api crear una función que reciba un pedido post los datos de un usuario y los guarde en un objeto en el archivo. Después crear un get que reciba ciertos parámetros en req.query y con esos parametros busque en el objeto de usuarios al usuario que cumple con los mismos y lo retorne. En ambos casos prestar atención a los status code que se devuelven.
