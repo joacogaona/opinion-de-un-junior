@@ -28,7 +28,7 @@ const referentsInfo: ReferentsInfoType = [
       "https://portal.gitnation.org/contents/lets-talk-about-re-renders",
     talkName: "Let`s talk abour re-renders",
     description:
-      "Tiene un blog con mucho contenido orientado a patrones y optimización en React. Es todo super práctico y con ejemplos de código entonces lo puedo aplicar directo en mi trabajo.",
+      "Tiene un blog con mucho contenido orientado a patrones y optimización en React. Es todo super práctico y con ejemplos de código, entonces lo puedo aplicar directo en mi trabajo.",
   },
   {
     id: 3,

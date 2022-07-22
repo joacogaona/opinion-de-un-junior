@@ -17,10 +17,12 @@ const Home = ({
   const router = useRouter();
   return (
     <div>
-      <section id="intro" className=" h-screen">
-        <div className="flex flex-col justify-center items-start h-2/5 w-full">
-          <h1>Por un junior,</h1>
-          <h1 className="text-purple-500 ">para juniors.</h1>
+      <section id="menu" className=" h-screen">
+        <div className="flex flex-col justify-center items-start h-2/5 w-full ">
+          <h1 className="text-4xl md:text-5xl lg:text-6xl">Por un junior,</h1>
+          <h1 className="text-purple-500 text-4xl md:text-5xl lg:text-6xl">
+            para juniors.
+          </h1>
         </div>
 
         <div className="flex flex-wrap justify-around">
@@ -55,12 +57,40 @@ const Home = ({
             ¿Por qué hago esto?
           </button>
         </div>
-        <div className="flex flex-col items-center h-1/5 justify-end ">
-          <span>Si querés un recorrido guiado</span>
-          <ArrowNarrowDownIcon className="h-12 w-12 text-purple-500" />
+        <div className="flex flex-col h-1/5 justify-end ">
+          <Link href="/#intro">
+            <a className="flex flex-col ">
+              <span className="text-purple-500">
+                Si querés un recorrido guiado
+              </span>
+              <ArrowNarrowDownIcon className="h-12 w-12 text-purple-500 self-center" />
+            </a>
+          </Link>
         </div>
       </section>
-      <section id="whoAmI" className="my-20">
+      <section id="intro" className="h-screen">
+        <div className="flex flex-col text-center">
+          <h3 className="self-center underline underline-offset-8 decoration-purple-500 mb-10">
+            ¿Qué vas a encontrar acá?
+          </h3>
+          <p>
+            Todo lo que vaya descubriendo y experimentando. Herramientas que
+            encuentre, cursos nuevos que haga, videos que me ayuden a entender
+            temas complicados y opiniones de todo.
+          </p>
+
+          <Link href="/#journey">
+            <a className="flex flex-col">
+              <p className="text-purple-500 mt-5">
+                Empezá por conocer un poco más de mi experiencia, mi actualidad
+                y mis referentes.
+              </p>
+              <ArrowNarrowDownIcon className="h-12 w-12 text-purple-500 self-center" />
+            </a>
+          </Link>
+        </div>
+      </section>
+      <section id="journey" className="my-20">
         <h3 className="w-max self-center underline underline-offset-8 decoration-purple-500 mb-10">
           ¿Cómo se ve mi camino?
         </h3>
@@ -137,22 +167,14 @@ const Home = ({
         </div>
       </section>
       <section id="whatMore" className="h-screen">
-        <h3 className="self-center underline underline-offset-8 decoration-purple-500 mb-10">
-          ¿Qué más vas a encontrar acá?
-        </h3>
         <div className="flex flex-col text-center">
-          <p>
-            Todo lo que vaya descubriendo y experimentando. Herramientas que
-            encuentre, cursos nuevos que haga, videos que me ayuden a entender
-            temas complicados y opiniones de todo.
-          </p>
-          <p className="mt-5 mb-10">
-            Ahora si, podés subir y elegir una sección que te interese. Espero
-            que te sirva!
-          </p>
-          <Link href="/#intro">
-            <a className="self-center">
-              <ArrowNarrowUpIcon className="h-12 w-12 text-purple-500 " />
+          <Link href="/#menu">
+            <a className="flex flex-col">
+              <p className=" mb-5 ">
+                Ahora sí, podés subir y elegir una sección que te interese.
+              </p>
+              <ArrowNarrowUpIcon className="h-12 w-12 text-purple-500 self-center " />
+              <p className="text-purple-500"> Espero que te sirva!</p>
             </a>
           </Link>
         </div>
