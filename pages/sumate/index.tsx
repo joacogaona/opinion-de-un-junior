@@ -4,7 +4,7 @@ const Why = () => {
       <h1 className="text-center mt-14 ">Sumate</h1>
 
       <p className="my-10">
-        Esta web asi como mis redes sociales, tienen como objetivo ayudar a las
+        Esta web, asi como mis redes sociales, tienen como objetivo ayudar a las
         personas que están iniciando en el mundo de la programación.
       </p>
 
@@ -16,12 +16,6 @@ const Why = () => {
         </li>
         <li className="mb-10 text-purple-500">
           - Compartir la web por tu red preferida.
-        </li>
-        <li className="mb-10 text-purple-500">
-          - Invitarme un cafecito.
-          <p>
-            (Toda la plata recaudada se va a usar para ayudar a la comunidad.)
-          </p>
         </li>
       </ul>
     </div>
