@@ -1,4 +1,4 @@
-import type { InferGetStaticPropsType, GetStaticProps } from "next";
+import type { InferGetStaticPropsType } from "next";
 import { capitalizeFirstLetter } from "../utils/format";
 import Link from "next/link";
 import { nowActionsInfo } from "../mocks/nowActionsInfo";
@@ -7,6 +7,7 @@ import { toolsInfo } from "../mocks/toolsInfo";
 import {
   ArrowNarrowUpIcon,
   ArrowNarrowDownIcon,
+  ArrowCircleRightIcon,
 } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
 
@@ -27,34 +28,28 @@ const Home = ({
 
         <div className="flex flex-wrap justify-around">
           <button
-            className="p-2 border-2 border-purple-500 rounded-lg my-2 hover:bg-purple-500"
-            onClick={() => router.push("/tools")}
+            className="p-3 border-2 border-purple-500 rounded-lg my-2 hover:bg-purple-500"
+            onClick={() => router.push("/herramientas")}
           >
             Herramientas preferidas
           </button>
           <button
-            className="p-2 border-2 border-purple-500 rounded-lg my-2"
-            onClick={() => router.push("/referents")}
+            className="p-3 border-2 border-purple-500 rounded-lg my-2"
+            onClick={() => router.push("/referentes")}
           >
             Referentes
           </button>
           <button
-            className="p-2 border-2 border-purple-500 rounded-lg my-2"
+            className="p-3 border-2 border-purple-500 rounded-lg my-2"
             onClick={() => router.push("/blog")}
           >
             Blog
           </button>
           <button
-            className="p-2 border-2 border-purple-500 rounded-lg my-2"
-            onClick={() => router.push("/aboutMe")}
+            className="p-3 border-2 border-purple-500 rounded-lg my-2"
+            onClick={() => router.push("/sumate")}
           >
-            Sobre mí
-          </button>
-          <button
-            className="p-2 border-2 border-purple-500 rounded-lg my-2"
-            onClick={() => router.push("/why")}
-          >
-            ¿Por qué hago esto?
+            Sumate
           </button>
         </div>
         <div className="flex flex-col h-1/5 justify-end ">
@@ -127,12 +122,23 @@ const Home = ({
         </h3>
         <div className=" h-full flex justify-around flex-col ">
           {nowData.map((nowObj) => {
-            const { title, id, description } = nowObj;
+            const { title, id, description, link } = nowObj;
             return (
               <div key={id} className="flex flex-col ">
-                <span className="text-purple-500">
-                  {capitalizeFirstLetter(title)}
-                </span>
+                {link !== undefined ? (
+                  <a href={link} target="_blank" rel="nofollow noreferrer">
+                    <div className="flex flex-row items-center text-purple-500">
+                      <span> {capitalizeFirstLetter(title)}</span>
+                      <ArrowCircleRightIcon className="h-8 w-8" />
+                    </div>
+                  </a>
+                ) : (
+                  <p className="text-purple-500">
+                    {" "}
+                    {capitalizeFirstLetter(title)}
+                  </p>
+                )}
+
                 <p>{description}</p>
               </div>
             );
@@ -148,16 +154,15 @@ const Home = ({
           {referentsData.map((referent) => {
             const { id, name, talkLink, talkName } = referent;
             return (
-              <div key={id} className="flex flex-row ">
-                <div className="w-1/2">
-                  <Link href={`referents/${id.toString()}`}>
-                    <a className="hover:underline underline-offset-8 decoration-purple-500 text-purple-500 ">
-                      {name}
-                    </a>
-                  </Link>
+              <div key={id} className="flex flex-row min-w-full">
+                <div className="w-1/2 text-purple-500 ">
+                  <a target="_blank" href={talkLink} rel="nofollow noreferrer">
+                    <p>{name}</p>
+                    <ArrowCircleRightIcon className="h-5 w-5" />
+                  </a>
                 </div>
                 <div className="w-1/2">
-                  <a target="_blank" href={talkLink} rel="noreferrer">
+                  <a target="_blank" href={talkLink} rel="nofollow noreferrer">
                     {talkName}
                   </a>
                 </div>

@@ -2,15 +2,16 @@ import Head from "next/head";
 import Image from "next/image";
 import { SocialIcon } from "react-social-icons";
 import { useRouter } from "next/router";
+import Link from "next/link";
+import { ArrowCircleRightIcon } from "@heroicons/react/outline";
 
 type Sections = { path: string; name: string }[];
 
 const sections: Sections = [
-  { path: "/tools", name: "Herramientas recomendadas" },
-  { path: "/referents", name: "Referentes" },
+  { path: "/herramientas", name: "Herramientas recomendadas" },
+  { path: "/referentes", name: "Referentes" },
   { path: "/blog", name: "Blog" },
-  { path: "/aboutMe", name: "Sobre mí" },
-  { path: "/why", name: "¿Por qué?" },
+  { path: "/sumate", name: "Sumate" },
 ];
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
@@ -26,6 +27,16 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           content="Opiniones, herramientas, videos y notas que me ayudan a avanzar en mi carrera como desarrollador web"
         />
       </Head>
+      {pathname !== "/" ? (
+        <header className=" pt-5">
+          <Link href="/">
+            <a className="flex flex-row justify-end items-center">
+              Inicio
+              <ArrowCircleRightIcon className="ml-1 h-5 w-5 " />
+            </a>
+          </Link>
+        </header>
+      ) : null}
 
       <main>{children}</main>
       <footer className="flex flex-col ">

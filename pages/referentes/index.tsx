@@ -1,14 +1,13 @@
 import { referentsInfo } from "../../mocks/referentsInfo";
 import type { InferGetStaticPropsType } from "next";
 import { ArrowCircleRightIcon } from "@heroicons/react/outline";
-import { SocialIcon } from "react-social-icons";
 
 const Tools = ({
   referentsData,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
-      <div className="flex flex-col  items-center my-10">
+      <div className="flex flex-col  items-center my-5">
         <h1>Referentes de contenido</h1>
         <span className="text-sm ">(para mantenerse actualizade)</span>
       </div>

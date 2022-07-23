@@ -7,7 +7,7 @@ const Tools = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
-      <h1>Herramientas que me gustan</h1>
+      <h1 className="text-center mt-5">Herramientas que me gustan</h1>
       <div>
         {toolsData.map((tool) => {
           return (

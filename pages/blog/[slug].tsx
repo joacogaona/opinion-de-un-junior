@@ -3,7 +3,6 @@ import path from "path";
 import matter from "gray-matter";
 import { marked } from "marked";
 import type { InferGetStaticPropsType } from "next";
-import Link from "next/link";
 
 type GetStaticProps = {
   frontMatter: {};
@@ -11,17 +10,11 @@ type GetStaticProps = {
   content: string;
 };
 const PostPage = ({
-  frontMatter: { title },
-  slug,
   content,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div className="flex flex-col items-center">
-      <Link href="/">
-        <a className="self-start">Atrás</a>
-      </Link>
-
-      <article className="prose dark:prose-invert lg:prose-xl ">
+    <div>
+      <article className="prose dark:prose-invert lg:prose-xl m-auto ">
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       </article>
     </div>

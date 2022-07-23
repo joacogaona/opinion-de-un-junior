@@ -2,10 +2,17 @@ import fs from "fs";
 import path from "path";
 import matter from "gray-matter";
 import Link from "next/link";
+import { ArrowCircleRightIcon } from "@heroicons/react/outline";
+
 type Posts = { posts: Post[] };
 type Post = {
   slug: string;
-  frontMatter: { title: string; description: string; date: string };
+  frontMatter: {
+    title: string;
+    description: string;
+    date: string;
+    words: number;
+  };
 };
 const Blog = ({ posts }: Posts) => {
   return (
@@ -20,10 +27,14 @@ const Blog = ({ posts }: Posts) => {
             <Link href={`/blog/${slug}`}>
               <a>
                 <div>
-                  <h2 className="text-purple-500 text-xl font-bold">
-                    {frontMatter.title}
-                  </h2>
+                  <div className="flex flex-row items-center text-purple-500">
+                    <h2 className=" text-xl font-bold">{frontMatter.title}</h2>
+                    <ArrowCircleRightIcon className=" h-10 w-10  " />
+                  </div>
                   <p className="">{frontMatter.description}</p>
+                  <p className="italic">{`Tiempo de lectura: ${
+                    Math.round(frontMatter.words / 200) + 3
+                  } minutos`}</p>
                 </div>
               </a>
             </Link>
