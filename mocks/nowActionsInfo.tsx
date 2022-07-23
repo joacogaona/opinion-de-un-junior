@@ -18,7 +18,7 @@ const nowActionsInfo: NowActions = [
     id: 2,
     title: "buscando trabajo",
     description:
-      "Renuncié a mi anterior trabajo hace ya 3 meses porque quería un cambio.",
+      "Renuncié a mi anterior trabajo para cambiar de industria, y ahora estoy buscando a través de Linkedin principalmente.",
   },
   {
     id: 3,
