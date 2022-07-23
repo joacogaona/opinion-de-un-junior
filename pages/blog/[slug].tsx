@@ -14,7 +14,7 @@ const PostPage = ({
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
     <div>
-      <article className="prose dark:prose-invert lg:prose-xl m-auto ">
+      <article className="prose prose-invert lg:prose-xl m-auto ">
         <div dangerouslySetInnerHTML={{ __html: marked(content) }}></div>
       </article>
     </div>
