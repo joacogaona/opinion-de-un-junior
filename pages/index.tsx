@@ -18,7 +18,7 @@ const Home = ({
   const router = useRouter();
   return (
     <div>
-      <section id="menu" className=" h-screen">
+      <section id="menu" className=" h-screen ">
         <div className="flex flex-col justify-center items-start h-2/5 w-full ">
           <h1 className="text-4xl md:text-5xl lg:text-6xl">Por un junior,</h1>
           <h1 className="text-purple-500 text-4xl md:text-5xl lg:text-6xl">
@@ -28,25 +28,25 @@ const Home = ({
 
         <div className="flex flex-wrap justify-around">
           <button
-            className="p-3 border-2 border-purple-500 rounded-lg my-2 hover:bg-purple-500"
+            className="p-3 border-2 border-purple-500 rounded-lg my-2 hover:bg-purple-500 md:mx-2"
             onClick={() => router.push("/herramientas")}
           >
             Herramientas preferidas
           </button>
           <button
-            className="p-3 border-2 border-purple-500 rounded-lg my-2"
+            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2"
             onClick={() => router.push("/referentes")}
           >
             Referentes
           </button>
           <button
-            className="p-3 border-2 border-purple-500 rounded-lg my-2"
+            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2"
             onClick={() => router.push("/blog")}
           >
             Blog
           </button>
           <button
-            className="p-3 border-2 border-purple-500 rounded-lg my-2"
+            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2"
             onClick={() => router.push("/sumate")}
           >
             Sumate
@@ -64,7 +64,7 @@ const Home = ({
         </div>
       </section>
       <section id="intro" className="h-screen">
-        <div className="flex flex-col text-center">
+        <div className="flex flex-col text-center md:w-3/5 lg:1/2">
           <h3 className="self-center underline underline-offset-8 decoration-purple-500 mb-10">
             ¿Qué vas a encontrar acá?
           </h3>
@@ -129,7 +129,7 @@ const Home = ({
                   <a href={link} target="_blank" rel="nofollow noreferrer">
                     <div className="flex flex-row items-center text-purple-500">
                       <span> {capitalizeFirstLetter(title)}</span>
-                      <ArrowCircleRightIcon className="h-8 w-8" />
+                      <ArrowCircleRightIcon className="h-5 w-5" />
                     </div>
                   </a>
                 ) : (

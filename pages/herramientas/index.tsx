@@ -6,9 +6,9 @@ const Tools = ({
   toolsData,
 }: InferGetStaticPropsType<typeof getStaticProps>) => {
   return (
-    <div>
-      <h1 className="text-center mt-5">Herramientas que me gustan</h1>
-      <div>
+    <div className="h-screen">
+      <h1 className="text-center my-5">Herramientas que me gustan</h1>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-10">
         {toolsData.map((tool) => {
           return (
             <div key={tool.id} className="my-5">

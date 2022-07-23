@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 @layer base{
-  html{ @apply box-border m-0 p-0 bg-slate-900 text-slate-100 font-sans text-base md:text-base lg:text-lg scroll-smooth 
+  html{ @apply box-border m-0 p-0 bg-slate-900 text-slate-100 font-sans text-base md:text-lg lg:text-xl scroll-smooth 
   }
   body {
     @apply  mx-3 

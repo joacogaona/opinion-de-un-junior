@@ -1,7 +1,7 @@
 const Why = () => {
   return (
-    <div>
-      <h1 className="text-center mt-14">Sumate</h1>
+    <div className="lg:w-1/2 m-auto md:w-3/5">
+      <h1 className="text-center mt-14 ">Sumate</h1>
 
       <p className="my-10">
         Esta web asi como mis redes sociales, tienen como objetivo ayudar a las

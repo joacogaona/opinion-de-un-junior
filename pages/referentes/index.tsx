@@ -11,26 +11,31 @@ const Tools = ({
         <h1>Referentes de contenido</h1>
         <span className="text-sm ">(para mantenerse actualizade)</span>
       </div>
-      <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
         {referentsData.map((referent) => {
           return (
-            <div key={referent.id} className="my-10">
-              <div className="flex flex-row items-center font-bold">
-                <h2 className="mr-2 ">{referent.name}</h2>
-                <div className="border border-purple-500 grow" />
+            <div key={referent.id} className="flex flex-col justify-between">
+              <div>
+                <div className="flex flex-row items-center font-bold">
+                  <h2 className="mr-2 ">{referent.name}</h2>
+                  <div className="border border-purple-500 grow" />
+                </div>
+                <p className="mb-2">{referent.description}</p>
               </div>
-              <p className="mb-2">{referent.description}</p>
-              <a
-                href={referent.talkLink}
-                target="_blank"
-                rel="nofollow noreferrer"
-              >
-                <span> Contenido recomendado: </span>
-                <span className="text-purple-500 flex flex-row items-center">
-                  {referent.talkName}
-                  <ArrowCircleRightIcon className="ml-1 h-5 w-5 " />
-                </span>
-              </a>
+              <div>
+                <a
+                  href={referent.talkLink}
+                  target="_blank"
+                  rel="nofollow noreferrer"
+                  className="self-end"
+                >
+                  <span> Contenido recomendado: </span>
+                  <span className="text-purple-500 flex flex-row items-center">
+                    {referent.talkName}
+                    <ArrowCircleRightIcon className="ml-1 h-5 w-5 " />
+                  </span>
+                </a>
+              </div>
             </div>
           );
         })}
