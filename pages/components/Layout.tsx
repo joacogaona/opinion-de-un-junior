@@ -21,7 +21,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
       <Head>
-        <title className="text-3xl font-bold ">Opinión de un Junior</title>
+        <title className="text-3xl font-bold ">Junior developer</title>
         <meta
           name="description"
           content="Opiniones, herramientas, videos y notas que me ayudan a avanzar en mi carrera como desarrollador web"

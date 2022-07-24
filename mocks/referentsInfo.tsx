@@ -48,7 +48,7 @@ const referentsInfo: ReferentsInfoType = [
     talkLink: "https://www.youtube.com/watch?v=uqII0AOW1NM",
     talkName: "Frontend Interview w/ Ex-Twitch Engineer",
     description:
-      "Se encuentra actualmente trabajando en la nueva documentación de React, y en Twitter suele publicar las actualizaciones y pide feedback a cualquier/a programador/a en especial a juniors.",
+      "Se encuentra actualmente trabajando en la nueva documentación de React, y en Twitter suele publicar las actualizaciones y pide feedback de las personas, en especial de juniors.",
   },
   {
     id: 5,
@@ -59,7 +59,7 @@ const referentsInfo: ReferentsInfoType = [
       "https://portal.gitnation.org/contents/impact-growing-as-an-engineer-783",
     talkName: "Growing as an Engineer",
     description:
-      "A Iris no la conozco mucho pero me encantó una charla que dió en el último React Summit sobre cómo crecer como desarrollador/a web. Habilidades no técnicas pero que nos ayudan muchisimo para seguir creciendo.",
+      "A Iris no la conozco mucho pero me encantó una charla que dió en el último React Summit sobre cómo crecer como desarrolladora web. Habla sobre habilidades no técnicas que nos ayudan muchísimo para seguir creciendo.",
   },
 ];
 

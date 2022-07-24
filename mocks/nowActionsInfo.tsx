@@ -18,7 +18,7 @@ const nowActionsInfo: NowActions = [
     id: 2,
     title: "buscando trabajo",
     description:
-      "Renuncié a mi anterior trabajo para cambiar de industria, y ahora estoy buscando a través de Linkedin principalmente.",
+      "Renuncié a mi anterior trabajo para cambiar de industria, y ahora estoy buscando uno nuevo a través de Linkedin principalmente.",
   },
   {
     id: 3,
@@ -30,7 +30,7 @@ const nowActionsInfo: NowActions = [
     id: 4,
     title: "viviendo en Panamá",
     description:
-      "Hace ya 7 meses que estoy viajando por Latinoamerica. Pasé por Perú, Colombia y ahora Panamá.",
+      "Hace ya 7 meses que estoy viajando por Latinoamérica. Pasé por Perú, Colombia y ahora Panamá.",
   },
 ];
 
