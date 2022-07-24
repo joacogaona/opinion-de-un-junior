@@ -48,10 +48,10 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             <div className="flex flex-wrap justify-around ">
               {sections.map((section) => {
                 const { path, name } = section;
-
                 if (path !== pathname) {
                   return (
                     <button
+                      key={path}
                       className="p-2 border-2 border-purple-500 rounded-lg my-2 hover:bg-purple-500"
                       onClick={() => router.push(`${path}`)}
                     >
