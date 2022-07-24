@@ -26,6 +26,7 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
           name="description"
           content="Opiniones, herramientas, videos y notas que me ayudan a avanzar en mi carrera como desarrollador web"
         />
+        <link href="/favicon.png" />
       </Head>
       {pathname !== "/" ? (
         <header className=" pt-5">

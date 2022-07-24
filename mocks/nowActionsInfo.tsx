@@ -30,7 +30,7 @@ const nowActionsInfo: NowActions = [
     id: 4,
     title: "viviendo en Panamá",
     description:
-      "Hace ya 7 meses que estoy viajando por Latinoamérica. Pasé por Perú, Colombia y ahora Panamá.",
+      "Hace ya 7 meses que estoy viajando por Latinoamérica. Pasé por Perú, Colombia y ahora Panamá. Podés conocer más de esta experiencia en mi canal de Youtube Joacog programa.",
   },
 ];
 
