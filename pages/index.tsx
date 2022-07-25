@@ -34,19 +34,19 @@ const Home = ({
             Herramientas preferidas
           </button>
           <button
-            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2"
+            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2 hover:bg-purple-500"
             onClick={() => router.push("/referentes")}
           >
             Referentes
           </button>
           <button
-            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2"
+            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2 hover:bg-purple-500"
             onClick={() => router.push("/blog")}
           >
             Blog
           </button>
           <button
-            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2"
+            className="p-3 border-2 border-purple-500 rounded-lg my-2 md:mx-2 hover:bg-purple-500"
             onClick={() => router.push("/sumate")}
           >
             Sumate
