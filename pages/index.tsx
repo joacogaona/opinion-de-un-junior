@@ -116,7 +116,10 @@ const Home = ({
           </div>
         </div>
       </section>
-      <section id="now" className="h-screen mb-20">
+      <section
+        id="now"
+        className="h-screen mb-20 md:w-4/5 md:mx-auto lg:w-3/5 lg:mx-auto"
+      >
         <h3 className="w-max self-center underline underline-offset-8 decoration-purple-500 mb-10">
           ¿Qué estoy haciendo ahora?
         </h3>
