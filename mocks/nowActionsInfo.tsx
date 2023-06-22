@@ -16,9 +16,9 @@ const nowActionsInfo: NowActions = [
   },
   {
     id: 2,
-    title: "buscando trabajo",
+    title: "buscando trabajo en Europa",
     description:
-      "Renuncié a mi anterior trabajo para cambiar de industria, y ahora estoy buscando uno nuevo a través de Linkedin principalmente.",
+      "Estaba trabajando en una empresa pública de Estados Unidos y caí en un despido masivo de los que hubo en la industria tech. Ahora quiero ver la posibilidad de encontrar un trabajo para poder irme a Europa a vivir un tiempo.",
   },
   {
     id: 3,
@@ -28,9 +28,9 @@ const nowActionsInfo: NowActions = [
   },
   {
     id: 4,
-    title: "viviendo en Panamá",
+    title: "viviendo en Argentina",
     description:
-      "Hace ya 7 meses que estoy viajando por Latinoamérica. Pasé por Perú, Colombia y ahora Panamá. Podés conocer más de esta experiencia en mi canal de Youtube Joacog programa.",
+      "El último año y medio estuve viajando por Latinoamérica. Pasé por Perú, Colombia, Panamá, México y Cuba. Podés conocer más de esta experiencia en mi canal de Youtube Joacog programa.",
   },
 ];
 

@@ -112,7 +112,11 @@ const Home = ({
           </div>
           <div className="p-4 border-2 border-purple-500 rounded-lg my-2">
             <h4>Desarrollador Full Stack en</h4>
-            <h4>Keiron</h4>
+            <h4>Keiron (remoto Chile)</h4>
+          </div>
+          <div className="p-4 border-2 border-purple-500 rounded-lg my-2">
+            <h4>Desarrollador Full Stack en</h4>
+            <h4>Xometry (remoto EEUU)</h4>
           </div>
         </div>
       </section>
